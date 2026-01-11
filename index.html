@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Surprise Gift</title>
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    text-align: center;
+}
+.page {
+    display: none;
+    height: 100vh;
+    padding: 40px;
+}
+.page.active {
+    display: block;
+}
+h1 {
+    margin-top: 80px;
+    font-size: 30px;
+}
+button {
+    margin-top: 40px;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    background: #ff4e50;
+    color: white;
+    cursor: pointer;
+}
+img {
+    width: 220px;
+    margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="page active">
+    <h1>🎉 SURPRISE GIFT<br>FOR BELOVED COLLEAGUE 🎉</h1>
+    <button onclick="nextPage()">Next ➡️</button>
+</div>
+
+<div class="page">
+    <h1>💖 FROM<br>"MUSKAN KA RASMALAI BROTHER" 💖</h1>
+    <button onclick="nextPage()">Next ➡️</button>
+</div>
+
+<div class="page">
+    <img src="gift1.png">
+    <h1>🎁 Open it 🎁</h1>
+    <button onclick="nextPage()">Open ➡️</button>
+</div>
+
+<div class="page">
+    <img src="gift2.png">
+    <h1>⏳ Hurry up 😍</h1>
+    <button onclick="nextPage()">Open ➡️</button>
+</div>
+
+<div class="page">
+    <img src="gift3.png">
+    <h1>
+        💝 Final Surprise 💝<br><br>
+        Ye chhota sa gift sirf tumhare liye
+    </h1>
+    <button onclick="nextPage()">Last ➡️</button>
+</div>
+
+<div class="page">
+    <h1>Ye lo man bhar k kha lo,<br>badle me ek month ki chai chaiye mujhe ☕😄</h1>
+    <!-- YAHAN APNI GALLERY WALI IMAGE KA NAAM DALO -->
+    <img src="stone.jpg">
+</div>
+
+<script>
+let currentPage = 0;
+const pages = document.querySelectorAll('.page');
+
+function nextPage() {
+    pages[currentPage].classList.remove('active');
+    currentPage++;
+    pages[currentPage].classList.add('active');
+}
+</script>
+
+</body>
+</html>
